@@ -11,7 +11,7 @@ export default function AboutSection() {
     >
       <div className="container mx-auto px-4">
         <motion.h2 
-          className="text-3xl font-bold mb-8 text-center dark:text-white"
+          className="text-3xl font-bold mb-8 text-center dark:text-white uppercase tracking-wider"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

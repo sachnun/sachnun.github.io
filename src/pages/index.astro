@@ -7,31 +7,19 @@ import SkillsSection from "../components/sections/SkillsSection";
 ---
 
 <Layout>
-  <PageContainer client:load>
-    <div data-anchor="hero">
-      <HeroSection client:load />
-    </div>
-    <div data-anchor="about">
-      <AboutSection client:load />
-    </div>
-    <div data-anchor="skills">
-      <SkillsSection client:load />
-    </div>
-  </PageContainer>
+  <div class="h-full overflow-y-auto overflow-x-hidden">
+    <PageContainer client:load>
+      <div class="overflow-x-hidden">
+        <div data-anchor="hero" class="h-screen">
+          <HeroSection client:load />
+        </div>
+        <div data-anchor="about" class="h-screen">
+          <AboutSection client:load />
+        </div>
+        <div data-anchor="skills" class="h-screen">
+          <SkillsSection client:load />
+        </div>
+      </div>
+    </PageContainer>
+  </div>
 </Layout>
-
-<style is:global>
-  html,
-  body {
-    height: 100%;
-    overflow: hidden;
-  }
-  #container {
-    height: 100vh;
-    overflow: hidden;
-  }
-  [data-anchor] {
-    height: 100vh;
-    overflow: hidden;
-  }
-</style>

@@ -34,7 +34,7 @@ export default function SkillsSection() {
     >
       <div className="container mx-auto px-4">
         <motion.h2 
-          className="text-3xl font-bold mb-8 text-center dark:text-white"
+          className="text-3xl font-bold mb-8 text-center dark:text-white uppercase tracking-wider"
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
