@@ -1,9 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import PageContainer from "../components/PageContainer";
-import HeroSection from "../components/HeroSection";
-import AboutSection from "../components/AboutSection";
-import SkillsSection from "../components/SkillsSection";
+import HeroSection from "../components/sections/HeroSection";
+import AboutSection from "../components/sections/AboutSection";
+import SkillsSection from "../components/sections/SkillsSection";
 ---
 
 <Layout>
@@ -21,7 +21,8 @@ import SkillsSection from "../components/SkillsSection";
 </Layout>
 
 <style is:global>
-  html, body {
+  html,
+  body {
     height: 100%;
     overflow: hidden;
   }

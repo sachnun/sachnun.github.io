@@ -11,17 +11,21 @@ export default function PageContainer({ children }) {
         const Pageable = (await import('pageable')).default;
         pageable = new Pageable(containerRef.current, {
           childSelector: "[data-anchor]",
-          animation: 800,
+          animation: 600, // Faster animation for mobile
           delay: 0,
           throttle: 50,
           orientation: "vertical",
-          swipeThreshold: 50,
+          swipeThreshold: 30, // More sensitive swipe
           freeScroll: false,
           events: {
             wheel: true,
             mouse: false,
             touch: true,
             keydown: true
+          },
+          onFinish: function() {
+            // Prevent bounce effect on mobile
+            document.body.style.overflow = 'hidden';
           }
         });
       }

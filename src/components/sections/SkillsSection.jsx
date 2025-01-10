@@ -26,7 +26,7 @@ export default function SkillsSection() {
 
   return (
     <motion.section 
-      className="h-full flex items-center bg-gray-100 dark:bg-gray-900"
+      className="h-full flex items-start md:items-center bg-gray-100 dark:bg-gray-900 pt-16 md:pt-0"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
@@ -43,7 +43,7 @@ export default function SkillsSection() {
           Skills
         </motion.h2>
         <motion.div 
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto px-4"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -52,7 +52,7 @@ export default function SkillsSection() {
           {skills.map((skill) => (
             <motion.div 
               key={skill}
-              className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-center dark:text-gray-300"
+              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow text-center dark:text-gray-300"
               variants={itemVariants}
             >
               {skill}
