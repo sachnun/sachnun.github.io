@@ -1,12 +1,36 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import PageContainer from "../components/PageContainer";
 import HeroSection from "../components/HeroSection";
 import AboutSection from "../components/AboutSection";
 import SkillsSection from "../components/SkillsSection";
 ---
 
 <Layout>
-  <HeroSection client:load />
-  <AboutSection client:load />
-  <SkillsSection client:load />
+  <PageContainer client:load>
+    <div data-anchor="hero">
+      <HeroSection client:load />
+    </div>
+    <div data-anchor="about">
+      <AboutSection client:load />
+    </div>
+    <div data-anchor="skills">
+      <SkillsSection client:load />
+    </div>
+  </PageContainer>
 </Layout>
+
+<style is:global>
+  html, body {
+    height: 100%;
+    overflow: hidden;
+  }
+  #container {
+    height: 100vh;
+    overflow: hidden;
+  }
+  [data-anchor] {
+    height: 100vh;
+    overflow: hidden;
+  }
+</style>
